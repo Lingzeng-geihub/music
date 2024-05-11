@@ -1,0 +1,112 @@
+<!--components/song/song.wxml-->
+<view class="bag">
+  <image src="{{songs[0].al.picUrl}}" mode="scaleToFill" class="bagimg" />
+  <view class="song"></view>
+</view>
+<view class="view">
+  <van-nav-bar left-text="返回" border left-arrow bind:click-left="onClickLeft"  bind:click-right="onClickRight" custom-class="van-nav-bar van-hairline--bottom::after" >
+  <view wx:if="{{ishowlic}}" slot="title" >{{songs[0].name}}</view>
+  </van-nav-bar>
+  <view class="singer">
+    <view class="lycfather" hidden="{{ishowlic}}" bind:tap="isshowlic">
+      <view class="content" >
+  <view class="songimg" >
+    <view>
+    <image src="{{songs[0].al.picUrl}}" mode="widthFix" class="img"></image>
+  </view>
+  </view>
+  <view class="titles">
+    <view class="fathertitle">
+    <view class="title">
+      <view>
+        {{songs[0].al.name}}
+      </view>
+      <view>
+        {{songs[0].ar[0].name}}
+      </view>
+    </view>
+    <view class="icon">
+      <van-icon name="like-o" info="99+" size="25px" info-class="infoclass" />
+      <van-icon name="chat-o" info="9" size="25px" info-class="infoclass" />
+    </view>
+  </view>
+  </view>
+
+  <view>
+  
+  </view>
+
+  </view>
+    </view>
+    <view class="lycfather" hidden="{{!ishowlic}}" bind:tap="isshowlic" >
+      <view class="content">
+    <scroll-view class="licbox" scroll-y 	scroll-top="{{scrlllist}}" 	scroll-with-animation="ture" >
+      <view wx:for="{{lic}}" wx:key="index"
+      style="padding-top:{{index===0?screenHeight/3:0}}px; padding-bottom: {{index===lic.length-1?screenHeight/3:0}}px;"
+      class="lyc {{licindex===index ? 'active':''}}">
+      {{item.content}}
+      </view>
+    </scroll-view>
+
+
+</view>
+    </view>
+  </view>
+  <view class="slider">
+    <slider class="slider" block-size="12" value="{{slidertime}}" bindchange="sliderchange"  max="{{max}}" ></slider>
+    <view class="time">
+      <view class="timeleft">
+       {{songtime}}
+      </view>
+      <view class="timeright">
+        {{totaltime}}
+      </view>
+    </view>
+    <view class="allbuton">
+
+      <view class="back" >
+        <image src="../../pages/icon/1(1).png" class="paly" bind:tap="cyclecliack" data-pattern="single" 
+        wx:if="{{single}}"></image>
+        <image src="../../pages/icon/2.png" class="paly" bind:tap="cyclecliack"
+         wx:if="{{Shuffle}}" data-pattern="Shuffle" ></image>
+        <image src="../../pages/icon/3.png" class="paly" bind:tap="cyclecliack" wx:if="{{list}}"
+         data-pattern="list" ></image>
+      </view>
+
+      <view class="button">
+        <view bind:tap="last">
+          <image src="../../pages/icon/previous.png" class="paly"  ></image>
+        </view>
+        <view class="back"  >
+          <image src="../../pages/icon/play-button.png" class="paly" wx:if="{{play}}" bind:tap="play" ></image>
+          <image src="../../pages/icon/play.png" class="paly"  wx:if="{{pause}}" bind:tap="pause" ></image>
+        </view>
+        <view bind:tap="next">
+          <image src="../../pages/icon/next-button.png" class="paly"></image>
+        </view>
+
+      </view>
+
+      <view>
+        <image src="../../pages/icon/musiclist.png" class="paly" bind:tap="onshow"></image>
+      </view>
+    </view>
+  
+  </view>
+  <action show="{{show}}" bind:songlistclick='songlistclick' id='{{id}}' ></action>
+  <!-- <van-action-sheet show="{{ show }}" title="歌曲列表"  bind:close="onClose"  >
+  <scroll-view class="scrollaction" scroll-y> 
+    <view wx:for="{{playlist}}" wx:key="index">
+      <van-cell>
+      <view slot="title" class="action" id="{{item.id}}" bind:tap="songlistclick"  >
+        <text>{{item.name}}</text>·<block wx:for="{{item.singer}}" wx:for-item="a" wx:for-index="num" wx:key="index">
+        <text>{{a.name}}</text>
+        <text wx:if="{{num !==item.singer.length-1}}">/</text></block>
+      </view>
+      </van-cell>
+   
+      </view>
+  </scroll-view>
+
+</van-action-sheet> -->
+</view>

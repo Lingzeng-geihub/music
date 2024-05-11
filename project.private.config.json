@@ -3,6 +3,28 @@
   "projectname": "miniprogram-1",
   "setting": {
     "compileHotReLoad": true,
-    "skylineRenderEnable": true
+    "skylineRenderEnable": false,
+    "urlCheck": false
+  },
+  "libVersion": "3.3.4",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/page/Songcharts",
+          "pathName": "pages/page/Songcharts",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "components/song/song",
+          "pathName": "components/song/song",
+          "query": "id=2301158",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

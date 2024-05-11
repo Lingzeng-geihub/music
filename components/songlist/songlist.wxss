@@ -1,0 +1,54 @@
+/* components/songlist/songlist.wxss */
+.songlist{
+ 
+}
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 18vh;
+  margin-right: 20px;
+/* background-color: #B2EBF2; */
+}
+.linum{
+/* transform: translateY(-18px); */
+float: right;
+width: 130rpx;
+margin: 40rpx 0  0  0;
+white-space:nowrap;
+display: block;
+margin-left: 40rpx;
+
+
+}
+.linum .image{
+  height: 130rpx;
+  width: 130rpx;
+  border-radius: 12px;
+}
+/* .linum .num{
+  text-align: center;
+  position: relative;
+  height: 8rpx;
+  right: 28rpx;
+  top: 38rpx;
+ overflow: hidden;
+} */
+.fathertext{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+.linum .text{
+  width: 120rpx;
+  font-size: 12px;
+  line-height: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.linum:last-child{
+padding-right: 20px;
+}
+

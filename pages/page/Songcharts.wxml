@@ -1,0 +1,74 @@
+<!--pages/page/Songcharts.wxml-->
+<view class="songcharts">
+<view>
+  <van-nav-bar
+  title="标题"
+  left-text="返回"
+  left-arrow
+  bind:click-left="onClickLeft"
+  custom-class="navclass"
+/>
+</view>
+<scroll-view scroll-y class="scroll">
+  <view class="image">
+<image src="{{listdata.coverImgUrl}}" mode="scaleToFill"></image>
+</view>
+ <view class="fathertext">
+
+  <view class="text">
+  {{listdata.description}}
+  </view>
+  <view class="fathertags">
+  <view wx:for="{{listdata.tags}}" class="tags">
+ {{item}}
+ </view>
+ </view>
+ <view class="sub">
+ <view> <image src="../icon/subscribedCount.png" mode="aspectFit"/>
+  <text class="text">{{listdata.subscribedCount}}</text></view>
+ <view> <image src="../icon/share.png" mode="aspectFit"/></view>
+ </view>
+ </view>
+
+
+ <view class="listfather">
+   <view wx:for="{{listdata.tracks}}" class="list"  id="{{item.id}}" bind:tap="listclick">
+   <view class="listnum">
+   {{index+1}}
+   </view>
+   
+   <view class="songdata">
+   <view>
+   <text>
+    {{item.name}}
+   </text>
+    
+   </view>
+   <view class="singer">
+   <view wx:for="{{item.ar}}" wx:for-item="itemName" wx:for-index="idx">
+   <text>
+    {{itemName.name}}<text wx:if="{{idx!==item.ar.length-1}}">/</text>
+   </text>
+   
+   </view>
+   
+   <view  style="height: 100%;">
+   <text space='nbsp'>
+  ·  {{item.al.name}}
+   </text>
+  
+   </view>
+   </view>
+
+  
+   
+   </view>
+
+
+   </view>
+ </view>
+
+</scroll-view>
+
+
+</view>

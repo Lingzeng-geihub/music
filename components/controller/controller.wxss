@@ -1,0 +1,63 @@
+/* components/controller/controller.wxss */
+.controller{
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.record{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.image{
+  width: 48px;
+  height: 48px;
+  background-color: black;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rotate-center{-webkit-animation:rotate-center 30s infinite;animation:rotate-center 30s infinite}
+ @-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+ .rimage{
+   width: 32px;
+   height: 32px;
+   border-radius: 100%;
+  
+ }
+ .text {
+   display: flex;
+   align-items: center;
+   flex: 4;
+ }
+ .button{
+   display: flex;
+   flex: 1;
+   align-items:center;
+   justify-content: space-around;
+ }
+.buttonplay{
+  position: relative;
+ }
+ .back{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 6px;
+  left: 6px;
+ }
+
+ .back .play{
+   width: 100%;
+   height: 100%;
+ }
+.paly{
+   width: 20px;
+   height: 20px;
+ }

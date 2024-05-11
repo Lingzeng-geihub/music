@@ -1,0 +1,31 @@
+<!--pages/mian-music/music.wxml-->
+<view class="music">
+  <navigation-bar default-data="{{defaultData}}"></navigation-bar>
+
+  <scroll-view type="list" 	scroll-y="ture" style="height: 100vh; width:{{width}}px;"   >
+  <view class="musicscroll">
+    <swiper circular indicator-dots="ture">
+  <block wx:for="{{banner}}" wx:key="bannerId">
+  <swiper-item>
+    <image class="banner" src="{{item.pic}}" mode="widthFix"/>
+  </swiper-item>
+  </block>
+  </swiper>
+    <tab title="精选歌单" hasmore="ture"></tab>
+    <musictab request="top/playlist" arg="10"></musictab>
+    <tab title="歌曲排行"></tab>
+    <view class="sonlist" style="width: {{width}}px;">
+      <songlist></songlist>
+    </view>
+    <tab title="歌单推荐"hasmore="ture"></tab>
+    <view class="sonlist" style="width: {{width}}px;">
+      <listrecommend></listrecommend>
+    </view>
+  </view>
+  </scroll-view>
+
+  <view class="controller">
+  <controller></controller>
+  </view>
+   
+</view>

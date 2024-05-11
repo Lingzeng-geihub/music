@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+      "van-search": "@vant/weapp/search/index",
+      "van-cell": "@vant/weapp/cell/index"
+    }
+
+    
+  }
+  

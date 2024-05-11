@@ -1,0 +1,10 @@
+/* components/searchlist/searchlist.wxss */
+.scrollaction{
+  height: 60vh;
+}
+.action{
+  margin: 10px 0;
+}
+.active{
+  color: red;
+}

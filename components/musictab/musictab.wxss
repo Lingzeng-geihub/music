@@ -1,0 +1,40 @@
+/* components/musictab/musictab.wxss */
+
+.scroll{
+  height: 400rpx;
+
+}
+.musictab{
+  background-color: ＃F8F8FF;
+ display: flex;
+  width: 96%;
+  margin: 20rpx 0;
+}
+.image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8px;
+}
+.title{
+  display: block;
+  padding-top: 20rpx;
+  /* overflow: hidden; */
+  
+}
+.text{
+  width: 90%;
+  display: block;
+  font-size: 12px;
+  margin-left: 20rpx;
+  margin-top: 7px;
+  height: 15px;
+  overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+}
+.icon{
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  top: 30%;
+}

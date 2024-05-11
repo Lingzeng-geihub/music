@@ -1,0 +1,141 @@
+/* components/song/song.wxss */
+/* .bag{
+  position: relative
+} */
+.bagimg, .song{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.song{
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+.view{
+  position: fixed;
+  display: block;
+ width: 100%;
+  height: 100%;
+}
+.singer{
+  height: 70%; position: relative;
+}
+.content{
+  height: 100%; 
+  position: relative;
+  overflow: hidden;
+}
+.songimg{
+  /* height: 60%; */
+  margin: 0 auto;
+ text-align: center;
+ position: relative;
+ display: block;
+ top: 50%;
+ transform: translate(0%,-50%);
+}
+.songimg .img{
+  position: relative;
+  border-radius: 35px;
+}
+.view .van-nav-bar{
+background-color: rgb(255, 255, 255,.0) !important;
+}
+.van-hairline--bottom::after{
+  border-bottom-width: 0px !important;
+}
+.titles{
+  position: absolute; bottom: 0px; width: 95%;
+}
+.fathertitle{
+  display: flex; 
+  justify-content:space-between;
+}
+.title{
+  margin-left: 60rpx;
+  color:white;
+}
+.icon{
+ display: flex;
+ width: 30%;
+ justify-content: space-around;
+}
+.infoclass{
+  background-color: rgb(255, 255, 255,0) !important;
+}
+.songtitle{
+  right: 120rpx;
+  color:white;
+}
+
+.allbuton{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 20px;
+}
+.button{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+}
+.slider{
+  height: 20px;
+   margin: 0 20rpx;
+}
+.time{
+  position: relative;
+  height: 30rpx;
+  margin-top: 10rpx;
+}
+.timeleft, .timeright{
+  color: white;
+  position: absolute;
+}
+.timeright{
+  right: 8px;
+}
+.timeleft{
+  left: 8px;
+}
+.back{
+  position: relative;
+  width: 30px;
+}
+.paly{
+  width: 30px;
+  height: 30px;
+}
+.back .paly{
+  position: absolute;
+}
+.licbox{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.active{
+  color: rgb(241, 243, 241);
+  font-size: 18px;
+}
+.lyc{
+  display: block;
+  text-align: center;
+  height: 35px;
+  overflow: hidden;
+  line-height: 35px;
+}
+.lycfather{
+  height: 100%; 
+  width: 100%;
+ position: absolute;
+}
+.scrollaction{
+  height: 60vh;
+}
+.action{
+  margin: 10px 0;
+}

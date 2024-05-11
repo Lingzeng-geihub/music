@@ -1,0 +1,21 @@
+/* pages/mian-music/music.wxss */
+.music{
+}
+.musicscroll{
+  padding: 0 20px;
+}
+.sonlist{
+  margin-left: -20px;
+}
+.banner{
+  width: 100%;
+  border-radius: 8px ;
+}
+.active{
+  color: red;
+}
+.controller{
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(245, 245, 245);
+}

@@ -1,0 +1,29 @@
+<!--components/controller/controller.wxml-->
+<!-- <text>components/controller/controller.wxml</text> -->
+<view  class="musiccontroller">
+<view class="controller">
+ <view class="record">
+   <view class="image rotate-center">
+   <image src="{{detail.al.picUrl}}" mode="scaleToFill" class="rimage"> </image>
+   </view>
+ </view>
+ <view class="text">
+   <text class="name">{{detail.name}}</text>
+   </view>
+   <view class="button">
+   <view class="buttonplay">
+   <van-circle value="{{ 20 }}" 
+   color="#ee0a24" size="28" stroke-width="2" clockwise="{{ false }}" fill="">
+   </van-circle>
+   <view class="back">
+          <image src="../../pages/icon/play-button.png"  wx:if="{{playshow}}"class="play" mode="scaleToFill"></image>
+          <image src="../../pages/icon/play.png" wx:if="{{!playshow}}"  class="play" mode="scaleToFill"></image>
+      </view>
+   </view>
+   <view class="songlist" bind:tap="setlistshow">
+    <image src="../../pages/icon/icon_musiclist.png" class="paly" mode="scaleToFill" ></image>
+   </view>
+   </view>
+</view>
+<action show="{{listshow}}" bind:songlistclick='songlistclick' id='{{id}}' ></action>
+</view>

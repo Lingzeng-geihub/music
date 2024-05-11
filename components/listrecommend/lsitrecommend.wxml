@@ -1,0 +1,11 @@
+<!--components/listrecommend/lsitrecommend.wxml-->
+<view class="listrecommend">
+<scroll-view class="scroll" enable-flex="true" type="list" scroll-x="true" enhanced="ture"  show-scrollbar="{{false}}" >
+  <view wx:for="{{listrecomenddata}}" class="recommendlist" bind:tap="listclick" id="{{item.id}}"
+   wx:key="id">
+  <image src="{{item.coverImgUrl}}" mode="aspectFill" class="image" ></image>
+  <text class="text">{{item.name}}</text>
+</view>
+</scroll-view>
+
+</view>

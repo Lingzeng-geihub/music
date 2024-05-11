@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navgationbar/navgationbar",
+    "tab":"/components/tab/tab",
+    "musictab":"/components/musictab/musictab",
+    "songlist":"/components/songlist/songlist",
+    "listrecommend":"/components/listrecommend/lsitrecommend",
+    "controller":"/components/controller/controller"
+  },
+  "disableScroll": true
+
+
+  
+}

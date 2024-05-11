@@ -1,0 +1,16 @@
+<!--components/searchlist/searchlist.wxml-->
+<van-action-sheet show="{{ show }}" title="歌曲列表"  bind:close="onClose"  >
+  <scroll-view class="scrollaction" scroll-y> 
+    <view wx:for="{{playlist}}" wx:key="index">
+      <van-cell>
+     
+      <view slot="title" class="action {{index ==indexq? 'active':''}}" id="{{item.id}}" bind:tap="songlistclick">
+        <text>{{item.name}}</text>·<block wx:for="{{item.singer}}" wx:for-item="iten" wx:for-index="num" wx:key="index">
+        <text>{{iten.name}}</text>
+        <text wx:if="{{num !==item.singer.length-1}}">/</text></block>
+      </view>
+      </van-cell>
+      </view>
+  </scroll-view>
+
+</van-action-sheet>

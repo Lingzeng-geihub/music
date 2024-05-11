@@ -1,0 +1,45 @@
+<!--components/songlist/songlist.wxml-->
+
+  <van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="新歌榜>">
+  <scroll-view class="list" enable-flex="true" type="list" scroll-x="true" enhanced="ture" show-scrollbar="{{false}}" >
+    <view wx:for="{{track}}" wx:key="{{tracks.al.id}}" class="linum" bind:tap="song" data-item="{{item}}">
+      <image src="{{item.al.picUrl}}" class="image" mode="scaleToFill" >
+      </image>
+        <view class="text">
+      {{item.name}}
+      </view>
+  </view>
+  </scroll-view></van-tab>
+  <van-tab title="原创榜>">
+    <scroll-view class="list" enable-flex="true" type="list" scroll-x="true" enhanced="ture" show-scrollbar="{{false}}" >
+    <view wx:for="{{track}}" wx:key="{{tracks.al.id}}" class="linum" bind:tap="song" data-item="{{item}}">
+      <image src="{{item.al.picUrl}}" class="image" mode="scaleToFill" >
+      </image>
+        <view class="text">
+      {{item.name}}
+        </view>
+  </view>
+  </scroll-view></van-tab>
+  <van-tab title="飙升榜>">
+  <scroll-view class="list" enable-flex="true" type="list" scroll-x="true" enhanced="ture" show-scrollbar="{{false}}" >
+    <view wx:for="{{track}}" wx:key="{{tracks.al.id}}" class="linum" bind:tap="song" data-item="{{item}}">
+      <image src="{{item.al.picUrl}}" class="image" mode="scaleToFill" >
+      </image>
+        <view class="text">
+      {{item.name}}
+      </view>
+  </view>
+  </scroll-view></van-tab>
+  <van-tab title="热歌榜>">
+  <scroll-view class="list" enable-flex="true" type="list" scroll-x="true" enhanced="ture" 	show-scrollbar="{{false}}"  >
+    <view wx:for="{{track}}" wx:key="{{tracks.al.id}}" class="linum" bind:tap="song" data-item="{{item}}">
+      <image src="{{item.al.picUrl}}" class="image" mode="scaleToFill" >
+      </image>
+        <view class="text">
+      {{item.name}}
+      </view>
+  </view>
+  </scroll-view>
+  </van-tab>
+</van-tabs>

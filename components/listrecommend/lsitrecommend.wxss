@@ -1,0 +1,27 @@
+/* components/listrecommend/lsitrecommend.wxss */
+.listrecommend{
+  display: flex;
+  margin-top: 40rpx;
+  flex-wrap: nowrap;
+  height: 380px;
+}
+.scroll{
+  height: 300px;
+  display: flex;
+}
+.recommendlist{
+margin-left: 20px;
+}
+.recommendlist .image{
+  width: 250rpx;
+  height: 350rpx;
+  border-radius: 10px;
+}
+.recommendlist .text{
+  width: 145px;
+  font-size: 12px;
+  white-space: wrap;
+}
+.recommendlist:last-child{
+padding-right: 20px;
+}

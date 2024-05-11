@@ -1,0 +1,11 @@
+<!--components/tab/tab.wxml-->
+
+<view class="tab">
+<text class="tabtitle">{{title}}</text>
+<block wx:if="{{hasmore}}">
+  <text bind:tap="songlist"  class="more"> 更多 ></text> 
+</block>
+<block>
+  
+</block>
+</view>

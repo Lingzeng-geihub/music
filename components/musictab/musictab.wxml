@@ -1,0 +1,13 @@
+<!--components/musictab/musictab.wxml-->
+
+<scroll-view scroll-y="ture" class="scroll" enhanced="ture" type="list" >
+<view wx:for="{{playlist}}" wx:key="id" class="musictab">
+  <image src="{{item.creator.avatarUrl}}" class="image" mode="aspectFit"></image>
+  <view class="title">
+    <text class="text">{{item.creator.nickname}}</text>
+    <text class="text">{{item.creator.signature}}</text>
+  </view>
+  <view  class="icon">
+  </view>
+</view>
+</scroll-view >

@@ -1,0 +1,21 @@
+<!--pages/page/Searchdetails.wxml-->
+<van-nav-bar
+  title="音乐"
+  left-text="返回"
+  left-arrow
+  bind:click-left="onClickLeft"
+/>
+<van-search  value="{{value}}" placeholder="请输入搜索关键词"  shape="round" />
+<view wx:for="{{songlist.songs}}">
+<van-cell title="{{item.name}}" id="{{item.id}}" use-label-slot="true" bind:click="songclick">
+<view slot="label">
+<view style="display: inline-block;" wx:for="{{item.artists}}"  wx:for-item="name" 
+wx:for-index="num" wx:key="{{item.id}}" >
+ {{name.name}} <text wx:if="{{num !==item.artists.length-1}}">/</text> </view>
+ <view wx:for="{{item.alias}}" wx:key="{{index}}">
+<text>{{item}}</text>
+</view>
+</view>
+
+</van-cell>
+</view>

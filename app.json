@@ -1,20 +1,43 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/mian-music/music",
+    "pages/mian-video/video",
+    "components/song/song",
+    "components/tab/tab",
+    "components/musictab/musictab",
+    "components/searchlist/searchlist",
+    "components/songlist/songlist",
+    "components/listrecommend/lsitrecommend",
+    "pages/page/Songcharts",
+    "pages/page/Searchdetails",
+    "components/controller/controller"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
-  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/mian-music/music",
+        "text": "music",
+        "iconPath": "pages/icon/musicactive.png",
+        "selectedIconPath": "pages/icon/music.png"
+      },
+      {
+        "pagePath": "pages/mian-video/video",
+        "text": "video",
+        "iconPath": "pages/icon/videoactive.png",
+        "selectedIconPath": "pages/icon/video.png"
+      }
+    ]
+  },
   "renderer": "skyline",
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,
-      "disableABTest": true,
-      "sdkVersionBegin": "3.0.0",
-      "sdkVersionEnd": "15.255.255"
+      "defaultContentBox": true,
+      "disableABTest": true
     }
   },
   "componentFramework": "glass-easel",
